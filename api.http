@@ -1,0 +1,37 @@
+# GET http://127.0.0.1:8000/api/groups/ HTTP/1.1
+
+# POST http://127.0.0.1:8000/api/groups/ HTTP/1.1
+# content-type: application/json
+# Accept: application/json
+
+# {
+#     "name": "Soccer"
+# }
+
+# DELETE http://127.0.0.1:8000/api/groups/5 HTTP/1.1
+# content-type: application/json
+# Accept: application/json
+
+# GET http://127.0.0.1:8000/api/contacts/?group_id=2 HTTP/1.1
+
+# POST http://127.0.0.1:8000/api/contacts/ HTTP/1.1
+# content-type: application/json
+# Accept: application/json
+
+# {
+#     "firstName": "Aleksandar",
+#     "lastName": "Djurka",
+#     "phone": "123456789",
+#     "email": "al@mail.com"
+# }
+
+PUT http://127.0.0.1:8000/api/contacts/106 HTTP/1.1
+content-type: application/json
+Accept: application/json
+
+{
+    "firstName": "Aleksandar",
+    "lastName": "Djurka",
+    "phone": "0123456789",
+    "email": "lkj"
+}

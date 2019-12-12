@@ -1,0 +1,18 @@
+migration:
+
+php artisan make:migration create_contact_table
+php artisan make:migration create_group_table
+
+seeding:
+
+php artisan make:seeder GroupTableSeeder
+php artisan make:seeder ContactTableSeeder
+
+models:
+
+php artisan make:model Group --resource
+php artisan make:model Contact --resource
+
+controllers
+
+php artisan make:controller HomeController
