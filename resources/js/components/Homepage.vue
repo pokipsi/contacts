@@ -353,6 +353,7 @@ export default {
                   break;
                 }
               }
+              alert("Contact deleted successfully");
             }
           })
           .catch(error => {
