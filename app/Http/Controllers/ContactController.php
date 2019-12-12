@@ -23,7 +23,7 @@ class ContactController extends Controller
                     return $query->where('group_id', $group_id);
             })->
             orderBy('created_at', 'desc')->
-            paginate(20);
+            paginate(100);
         
         return $ret;
     }

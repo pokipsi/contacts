@@ -14,7 +14,7 @@ class ContactsTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-    	foreach (range(1,20000) as $index) {
+    	foreach (range(1,100) as $index) {
 	        DB::table('contacts')->insert([
             'avatar' => $faker->imageUrl($width = 100, $height = 100),
             'firstName' => $faker->firstName,
@@ -25,7 +25,8 @@ class ContactsTableSeeder extends Seeder
             'country' => $faker->country,
             'email' => $faker->freeEmail,
             'phone' => $faker->phoneNumber,
-            'note' => $faker->text($maxNbChars = 100)
+            'note' => $faker->text($maxNbChars = 100),
+            'group_id' => ($index % 3) + 1
 	        ]);
 	    }
     }
