@@ -15,7 +15,7 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
 
-            $table->engine = 'MyISAM';
+            // $table->engine = 'MyISAM';
 
             $table->bigIncrements('id');
             $table->timestamp('created_at')->useCurrent();
@@ -31,7 +31,7 @@ class CreateContactsTable extends Migration
             $table->string('phone')->default('');
             $table->text('note')->nullable();
             $table->bigInteger('group_id')->unsigned()->nullable();
-            $table->foreign('group_id')->references('id')->on('groups')->onDelete('set null');
+            // $table->foreign('group_id')->references('id')->on('groups')->onDelete('set null');
         });
     }
 
